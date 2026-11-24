@@ -1,0 +1,4 @@
+interface:
+  display_name: "Good UI · 交互与动效"
+  short_description: "从控件选型到手势、状态反馈和跨组件联动，设计并验收可操作的界面"
+  default_prompt: "用 $good-ui 改进这个页面的交互，并验证取消、确认和键盘操作后的状态。"
