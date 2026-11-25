@@ -23,6 +23,199 @@ header{background:#f6f9f4}.layout{grid-template-columns:minmax(220px,254px) minm
 .directory-dialog{position:fixed;margin:0 auto 0 0;inset:0 auto 0 0;width:min(87vw,340px);height:100dvh;max-height:100dvh;max-width:100%;box-sizing:border-box;padding:16px;border:0;border-right:1px solid #a6bbaa;background:#f8faf5;color:var(--ink)}
 .directory-dialog[open]{display:flex;flex-direction:column;gap:10px}.directory-dialog::backdrop{background:#16352e80}.directory-dialog>.pill{align-self:flex-end}.directory-dialog #menu{display:block;max-height:none;overflow-y:auto}.directory-dialog .sidebar-body{flex:1;min-height:0}
 
+/* 手势卡片 · 7701565154676247827 · 41s */
+[data-palette="1"]{--surface:#faf9f5;--key:#181715;--second:#d4c337;--scene:#edece8;--ink:#090a0c;--on-key:#ffffff;--on-second:#090a0c;--scheme:light;}
+/* 底部抽屉 · 7700914996658743138 · 15s */
+[data-palette="2"]{--surface:#f4efe2;--key:#923a2d;--second:#e8ccc0;--scene:#e8e1cd;--ink:#090a0c;--on-key:#ffffff;--on-second:#090a0c;--scheme:light;}
+/* 温控旋钮 · 7703890134701380539 · 27s */
+[data-palette="3"]{--surface:#e7edf2;--key:#9c9dc9;--second:#b4afde;--scene:#e4e9ee;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 提交按钮 · 7693886128084660051 · 29s */
+[data-palette="4"]{--surface:#111723;--key:#6597fa;--second:#56c393;--scene:#263131;--ink:#ffffff;--on-key:#090a0c;--on-second:#090a0c;--scheme:dark;}
+/* 范围选择 · 7693505588353326586 · 59s */
+[data-palette="5"]{--surface:#928c7b;--key:#e1a4af;--second:#f8f5f1;--scene:#474938;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 删除与撤销 · 7707440911684645050 · 199s */
+[data-palette="6"]{--surface:#f7f7f7;--key:#a94352;--second:#292630;--scene:#0f1318;--ink:#090a0c;--on-key:#ffffff;--on-second:#ffffff;--scheme:light;}
+/* 站点排序 · 7707440911684645050 · 168s */
+[data-palette="7"]{--surface:#f6f9fa;--key:#86a1d8;--second:#292d3a;--scene:#11171e;--ink:#090a0c;--on-key:#090a0c;--on-second:#ffffff;--scheme:light;}
+/* 搜索多选 · 7678008560513753457 · 93s */
+[data-palette="8"]{--surface:#fbfbfb;--key:#e67f76;--second:#fae6eb;--scene:#e5f9f4;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 日程展开 · 7698309347122719217 · 45s */
+[data-palette="9"]{--surface:#f7f3e9;--key:#23362e;--second:#ad8d8d;--scene:#614f52;--ink:#090a0c;--on-key:#ffffff;--on-second:#090a0c;--scheme:light;}
+/* 骨架加载 · 7675202235450898873 · 31s */
+[data-palette="10"]{--surface:#fbfdfd;--key:#dde7e2;--second:#a5bab0;--scene:#e5f4ec;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 清单进度 · 7687084532902181617 · 48s */
+[data-palette="11"]{--surface:#18181d;--key:#38524f;--second:#78c3b8;--scene:#eeefeb;--ink:#ffffff;--on-key:#ffffff;--on-second:#090a0c;--scheme:dark;}
+/* 月度看板 · 7698588731233635618 · 119s */
+[data-palette="12"]{--surface:#f0f5e7;--key:#e89046;--second:#599145;--scene:#d8d9c3;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 分段视图 · 7675759022058754491 · 22s */
+[data-palette="13"]{--surface:#fbfdfd;--key:#60cbe0;--second:#d8f0f6;--scene:#dff4eb;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 中文输入 · 7699520911870856483 · 34s */
+[data-palette="14"]{--surface:#fafcf7;--key:#4444df;--second:#161816;--scene:#f2f3e8;--ink:#090a0c;--on-key:#ffffff;--on-second:#ffffff;--scheme:light;}
+/* 收藏与计数 · 7693886128084660051 · 17s */
+[data-palette="15"]{--surface:#121418;--key:#f25b61;--second:#f7ad7f;--scene:#212c2f;--ink:#ffffff;--on-key:#090a0c;--on-second:#090a0c;--scheme:dark;}
+/* 即时开关 · 7693886128084660051 · 43s */
+[data-palette="16"]{--surface:#121817;--key:#40d28c;--second:#46a0b4;--scene:#3a352c;--ink:#ffffff;--on-key:#090a0c;--on-second:#090a0c;--scheme:dark;}
+/* 长按确认 · 7693886128084660051 · 57s */
+[data-palette="17"]{--surface:#19171a;--key:#ec5c5b;--second:#693537;--scene:#373538;--ink:#ffffff;--on-key:#090a0c;--on-second:#ffffff;--scheme:dark;}
+/* 可计量进度 · 7675202235450898873 · 21s */
+[data-palette="18"]{--surface:#fbfdfd;--key:#5fc6d1;--second:#688683;--scene:#e5f4ec;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 未知时长等待 · 7675202235450898873 · 5s */
+[data-palette="19"]{--surface:#fafcfc;--key:#48d2be;--second:#b9ebdd;--scene:#e5f4ec;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 行内校验 · 7707440911684645050 · 146s */
+[data-palette="20"]{--surface:#fdfdfd;--key:#1d2229;--second:#b4905a;--scene:#121418;--ink:#090a0c;--on-key:#ffffff;--on-second:#090a0c;--scheme:light;}
+/* 滑到底确认 · 7703534945674808614 · 57s */
+[data-palette="21"]{--surface:#515156;--key:#fc8c17;--second:#2f2f34;--scene:#4b494f;--ink:#ffffff;--on-key:#090a0c;--on-second:#ffffff;--scheme:dark;}
+/* 吸边工具条 · 7704998953363803427 · 122s */
+[data-palette="22"]{--surface:#f2f4f5;--key:#121416;--second:#f2f4f5;--scene:#fcfbf7;--ink:#090a0c;--on-key:#ffffff;--on-second:#090a0c;--scheme:light;}
+/* 二维定位 · 7704998953363803427 · 80s */
+[data-palette="23"]{--surface:#f2f4f5;--key:#ebab93;--second:#2f2f2f;--scene:#fcfbf7;--ink:#090a0c;--on-key:#090a0c;--on-second:#ffffff;--scheme:light;}
+/* 刻度吸附 · 7695339931123715366 · 79s */
+[data-palette="24"]{--surface:#f9f7f4;--key:#c0b6f5;--second:#161618;--scene:#ecebe7;--ink:#090a0c;--on-key:#090a0c;--on-second:#ffffff;--scheme:light;}
+/* 下拉刷新 · 7702749973260333519 · 17s */
+[data-palette="25"]{--surface:#f5f0e4;--key:#815835;--second:#dbc4ae;--scene:#e8e1cd;--ink:#090a0c;--on-key:#ffffff;--on-second:#090a0c;--scheme:light;}
+/* 级联地址 · 7678008560513753457 · 80s */
+[data-palette="26"]{--surface:#fdfdfd;--key:#64bbb6;--second:#e9eff0;--scene:#e1f2ee;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 数量步进器 · 7703890134701380539 · 71s */
+[data-palette="27"]{--surface:#e7edf2;--key:#aaafb4;--second:#949da8;--scene:#e4e9ee;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 搜索回填 · 7678008560513753457 · 45s */
+[data-palette="28"]{--surface:#fbfbfb;--key:#a59fd9;--second:#ececf2;--scene:#e1f2ee;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 日期区间 · 7693505588353326586 · 159s */
+[data-palette="29"]{--surface:#979089;--key:#f9f9ef;--second:#b4a8c8;--scene:#484b37;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 拆分按钮 · 7678008560513753457 · 56s */
+[data-palette="30"]{--surface:#fbfbfb;--key:#f39f3a;--second:#e7b267;--scene:#e1f2ee;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 贴边提示层 · 7704998953363803427 · 140s */
+[data-palette="31"]{--surface:#f2f4f5;--key:#101213;--second:#5e6061;--scene:#fcfbf7;--ink:#090a0c;--on-key:#ffffff;--on-second:#ffffff;--scheme:light;}
+/* 底部操作菜单 · 7700914996658743138 · 22s */
+[data-palette="32"]{--surface:#f4f0e7;--key:#8c3a28;--second:#dac8bc;--scene:#e8e1cd;--ink:#090a0c;--on-key:#ffffff;--on-second:#090a0c;--scheme:light;}
+/* 封面连续展开 · 7698309347122719217 · 23s */
+[data-palette="33"]{--surface:#fcf8f3;--key:#e0633c;--second:#1a6f88;--scene:#675654;--ink:#090a0c;--on-key:#090a0c;--on-second:#ffffff;--scheme:light;}
+/* 票根翻面 · 7693766486346714431 · 85s */
+[data-palette="34"]{--surface:#262626;--key:#90918f;--second:#e7e8e6;--scene:#514d47;--ink:#ffffff;--on-key:#090a0c;--on-second:#090a0c;--scheme:dark;}
+/* 胶囊展开面板 · 7677614770334048485 · 19s */
+[data-palette="35"]{--surface:#f7fafa;--key:#083a37;--second:#3acb9a;--scene:#e6f5ed;--ink:#090a0c;--on-key:#ffffff;--on-second:#090a0c;--scheme:light;}
+/* 主页面导航 · 7693475370372814543 · 15s */
+[data-palette="36"]{--surface:#f5f0e4;--key:#6c6257;--second:#ecdacb;--scene:#e7e0cf;--ink:#090a0c;--on-key:#ffffff;--on-second:#090a0c;--scheme:light;}
+/* 页内标签 · 7675759022058754491 · 15s */
+[data-palette="37"]{--surface:#fbfdfd;--key:#5fc2a4;--second:#cff3e6;--scene:#dff4eb;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 层级面包屑 · 7675759022058754491 · 27s */
+[data-palette="38"]{--surface:#fbfdfd;--key:#a4a0dd;--second:#edecf7;--scene:#e6f5ed;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 结果分页 · 7675759022058754491 · 33s */
+[data-palette="39"]{--surface:#fbfdfd;--key:#e7ab57;--second:#f3efda;--scene:#e5f4f0;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 分步预约 · 7675759022058754491 · 39s */
+[data-palette="40"]{--surface:#fbfdfd;--key:#33c997;--second:#cae8df;--scene:#e6f5ed;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 侧栏折叠与隐藏 · 7673806692824741489 · 26s */
+[data-palette="41"]{--surface:#faf6ef;--key:#35312a;--second:#9b503d;--scene:#e9e1d0;--ink:#090a0c;--on-key:#ffffff;--on-second:#ffffff;--scheme:light;}
+/* 命令搜索 · 7695264996816620863 · 151s */
+[data-palette="42"]{--surface:#29272a;--key:#524335;--second:#bdb49e;--scene:#dad8cf;--ink:#ffffff;--on-key:#ffffff;--on-second:#090a0c;--scheme:dark;}
+/* 侧滑行操作 · 7702749973260333519 · 26s */
+[data-palette="43"]{--surface:#f9f0e7;--key:#965e3e;--second:#dec4ad;--scene:#e9e2cf;--ink:#090a0c;--on-key:#ffffff;--on-second:#090a0c;--scheme:light;}
+/* 筛选请求竞态 · 7698588731233635618 · 124s */
+[data-palette="44"]{--surface:#f3eee6;--key:#509250;--second:#e89348;--scene:#dad8c3;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 图表吸附读数 · 7685690273317309702 · 85s */
+[data-palette="45"]{--surface:#27292a;--key:#f09e33;--second:#d1cfd2;--scene:#363837;--ink:#ffffff;--on-key:#090a0c;--on-second:#090a0c;--scheme:dark;}
+/* 网格与列表 · 7688568203442601098 · 86s */
+[data-palette="46"]{--surface:#1c1e23;--key:#e79d34;--second:#586688;--scene:#383639;--ink:#ffffff;--on-key:#090a0c;--on-second:#ffffff;--scheme:dark;}
+/* 日期吸顶与回顶 · 7702749973260333519 · 34s */
+[data-palette="47"]{--surface:#f7f3e8;--key:#885434;--second:#e2d7bc;--scene:#e8e1cd;--ink:#090a0c;--on-key:#ffffff;--on-second:#090a0c;--scheme:light;}
+/* 日历就地编辑 · 7695239669512286427 · 68s */
+[data-palette="48"]{--surface:#17212f;--key:#cfcdfa;--second:#81b7ed;--scene:#4a4643;--ink:#ffffff;--on-key:#090a0c;--on-second:#090a0c;--scheme:dark;}
+/* 指针聚光 · 7702054579910757632 · 22s */
+[data-palette="49"]{--surface:#101421;--key:#63649f;--second:#8080c5;--scene:#0a0f1b;--ink:#ffffff;--on-key:#ffffff;--on-second:#090a0c;--scheme:dark;}
+/* 分层视差 · 7702054579910757632 · 56s */
+[data-palette="50"]{--surface:#323758;--key:#7775a9;--second:#f7d6a2;--scene:#10112c;--ink:#ffffff;--on-key:#090a0c;--on-second:#090a0c;--scheme:dark;}
+/* 可调背景光束 · 7710429983525419126 · 16s */
+[data-palette="51"]{--surface:#372f87;--key:#c64ba5;--second:#4961b9;--scene:#131420;--ink:#ffffff;--on-key:#090a0c;--on-second:#ffffff;--scheme:dark;}
+/* 图标连续变形 · 7689034729610500206 · 28s */
+[data-palette="52"]{--surface:#edece8;--key:#171816;--second:#595855;--scene:#f0ede7;--ink:#090a0c;--on-key:#ffffff;--on-second:#ffffff;--scheme:light;}
+/* 文字聚焦 · 7622723961331207450 · 10s */
+[data-palette="53"]{--surface:#08030f;--key:#a6a0af;--second:#f9f7fa;--scene:#100a19;--ink:#ffffff;--on-key:#090a0c;--on-second:#090a0c;--scheme:dark;}
+/* 倒计时联动 · 7702298810399323624 · 74s */
+[data-palette="54"]{--surface:#ece8fe;--key:#b0a7e4;--second:#c8c2e8;--scene:#f0eff6;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 保留草稿重试 · 7675202235450898873 · 46s */
+[data-palette="55"]{--surface:#fbfdfd;--key:#3bcf9d;--second:#b6f2da;--scene:#e5f4ec;--ink:#090a0c;--on-key:#090a0c;--on-second:#090a0c;--scheme:light;}
+/* 拖入文件夹 · 7703534945674808614 · 188s */
+[data-palette="56"]{--surface:#282f2f;--key:#e68d21;--second:#dbd5cd;--scene:#444a48;--ink:#ffffff;--on-key:#090a0c;--on-second:#090a0c;--scheme:dark;}
+/* 分屏尺寸调整 · 7697102567993697457 · 122s */
+[data-palette="57"]{--surface:#605952;--key:#2f6668;--second:#b2a08e;--scene:#454037;--ink:#ffffff;--on-key:#ffffff;--on-second:#090a0c;--scheme:dark;}
+/* 卡片指针倾斜 · 7702054579910757632 · 28s */
+[data-palette="58"]{--surface:#131026;--key:#bd9e51;--second:#e8ce89;--scene:#0a0817;--ink:#ffffff;--on-key:#090a0c;--on-second:#090a0c;--scheme:dark;}
+/* The surrounding reader stays neutral so each clip can carry its own palette. */
+:root{--ink:#23252b;--muted:#575b64;--soft:#dfe0e3;--paper:#fbfaf8;--green:#474a53;--accent:#dedee4}
+header{background:#f7f6f3;border-color:#dedddb}.sidebar,.guide section,.nav-group{border-color:#dedddb}
+.hero p.chapter,.sideHead small,.nav-group small,.nav-group summary:before{color:#64636a}
+.case-search,.directory-toggle,.directory-dialog{border-color:#cfced0;background:#fff;color:#25252b}
+.menu button:hover{background:#ededf0}.menu button[aria-current]{background:#292a31;color:#fff;box-shadow:inset 3px 0 #aaa9ba}
+[data-palette]{
+  --muted:color-mix(in srgb,var(--ink) 73%,var(--surface));
+  --soft:color-mix(in srgb,var(--ink) 15%,var(--surface));
+  --line:color-mix(in srgb,var(--ink) 32%,var(--surface));
+  --tint:color-mix(in srgb,var(--key) 15%,var(--surface));
+  --tint2:color-mix(in srgb,var(--second) 15%,var(--surface));
+  --edge:color-mix(in srgb,var(--key) 58%,var(--ink));
+  --green:var(--edge);--accent:var(--key);color-scheme:var(--scheme);
+  color:var(--ink);background:var(--surface);border-color:var(--line);accent-color:var(--key);
+}
+[data-palette] .stage{background-color:var(--scene);background-image:radial-gradient(ellipse at 10% 8%,color-mix(in srgb,var(--second) 13%,transparent),transparent 55%),radial-gradient(ellipse at 90% 95%,color-mix(in srgb,var(--key) 14%,transparent),transparent 55%);background-size:cover}
+[data-palette] :is(.widget,.footline,.photo,.local-sheet,.cmd-box),dialog.route-sheet[data-palette]{background:var(--surface);color:var(--ink);border-color:var(--line)}
+[data-palette] .widget{box-shadow:0 12px 30px color-mix(in srgb,#121018 16%,transparent)}
+[data-palette] .footline{border-top:1px solid var(--line)}
+[data-palette] .stack::before{background:var(--tint2);border-color:var(--line)}
+[data-palette] .stack::after{background:var(--tint);border-color:var(--line)}
+[data-palette] :is(.counter,.triprow small,.empty-note,.sub,.ticket small){color:var(--muted)}
+[data-palette] :is(.stagebar span,.stagebar button,.pill,.round,.move button,.segment button,.lab-chips button,.lab-field,.bench select,.favorite,.switcher,.morph-btn,.swipe-face){background:var(--surface);color:var(--ink);border-color:var(--line)}
+[data-palette] .stagebar :is(span,button){box-shadow:0 1px 5px #0001}
+[data-palette] :is(.primary,.primary:hover,.ticket .primary,.segment [aria-pressed=true],.lab-chips [aria-pressed=true],.favorite[aria-pressed=true],.floater,.swipe-row .del,.mini-shell [aria-pressed=true],.date-grid [aria-pressed=true],.tip-row [role=tooltip],.ruler [aria-pressed=true]){background:var(--key);color:var(--on-key);border-color:var(--key)}
+[data-palette] :is(.pill:hover,.undo,.pull-area,.mini-page,#tabBody,.mini-shell,.suggest [aria-selected=true],.cmd-list [data-active=true]){color:var(--ink);background:var(--tint)}
+[data-palette] :is(.range-row input,.setting input,.control-line input,.bench progress){accent-color:var(--key)}
+[data-palette] :is(.ticket,.sk,.track,.ruler button,.date-grid button,.scroll-feed h3){background:var(--tint);color:var(--ink);border-color:var(--line)}
+[data-palette] .sk{background:var(--key)}[data-palette] .ticket{background:var(--surface)}
+[data-palette] .fill,[data-palette] .morph-btn i,[data-palette] .grip:before{background:var(--key)}
+[data-palette] .save[data-phase=done]{background:var(--second);color:var(--on-second)}
+[data-palette] .save[data-phase=error]{background:#ad3945;color:white}
+[data-palette] [aria-invalid=true]{border-color:#bf465a;outline:1px solid #bf465a}
+[data-palette] .triprow button{border-color:var(--line);color:var(--ink)}
+[data-palette="6"] .triprow button{background:var(--key);border-color:var(--key);color:var(--on-key)}
+[data-palette] .rank-preview{background:var(--tint);box-shadow:inset 0 3px var(--key)}
+[data-palette] .dial{background:conic-gradient(from 225deg,var(--heat) 0deg var(--a),var(--soft) var(--a) 270deg,transparent 270deg)}
+[data-palette] .dial:before{border-color:var(--line);background:linear-gradient(145deg,color-mix(in srgb,var(--surface) 55%,white),var(--surface) 55%,var(--soft))}
+[data-palette] .hand:before{background:var(--edge)}
+[data-palette="3"] .round,[data-palette="27"] .round{box-shadow:3px 3px 7px var(--line),-3px -3px 6px #fff9}
+[data-palette] .pack-head{background:linear-gradient(to right,var(--key) var(--packed,0%),var(--tint2) var(--packed,0%));border-color:var(--line)}
+[data-palette="12"] .week:nth-child(even) .fill{background:var(--second)}
+[data-palette] .lamp{background:color-mix(in srgb,var(--surface) 90%,black)}[data-palette] .lamp i{background:var(--soft)}
+[data-palette] .lamp.lit i{background:var(--key);box-shadow:0 0 36px 10px color-mix(in srgb,var(--key) 65%,transparent)}
+[data-palette] .switcher i{background:var(--line)}[data-palette] .switcher[aria-checked=true] i{background:var(--key)}
+[data-palette] .hold{border-color:var(--key);color:var(--ink);background:linear-gradient(90deg,var(--second),var(--second)) left / 0% 100% no-repeat,var(--surface)}
+[data-palette] .hold.holding{background-size:100% 100%}
+[data-palette] .waiting i{border-color:var(--soft);border-top-color:var(--key)}
+[data-palette] :is(.dock-area,.xy,.map-panel){border-color:var(--line);background-color:var(--tint2);background-image:repeating-linear-gradient(30deg,transparent 0 29px,var(--soft) 30px 32px)}
+[data-palette] .dock-area[data-edge=left]{box-shadow:inset 4px 0 var(--key)}[data-palette] .dock-area[data-edge=right]{box-shadow:inset -4px 0 var(--key)}
+[data-palette] .xy i{border-color:var(--key);outline-color:var(--second);background:var(--second)}
+[data-palette] .ruler-shell:after{border-color:var(--edge)}[data-palette] .flip-card{background:linear-gradient(150deg,var(--second),var(--key));color:var(--on-key)}
+/* The front at 01:21 uses sunset bronze; the reverse at 01:25 is graphite. */
+[data-palette="34"] .flip-card{background:linear-gradient(155deg,#766c5b,#9e340c 50%,#281911 76%,#0d0f14);color:#fff}
+[data-palette="34"] .flip-card.back{background:var(--surface);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+[data-palette] .capsule{background:var(--key);color:var(--on-key)}
+[data-palette] .tabs [aria-selected=true],[data-palette] .steps [aria-current]{border-color:var(--key);box-shadow:inset 0 -1px var(--edge)}
+[data-palette] :is(.steps li,.swipe-row,.scroll-feed,.plot,.day){border-color:var(--line)}
+[data-palette] .plot i{background:color-mix(in srgb,var(--second) 45%,var(--surface))}
+[data-palette] .plot i.sel{background:var(--key);box-shadow:0 -4px var(--second)}
+[data-palette] .visual-board{background-color:var(--surface)}
+[data-palette] .visual-board strong{background:color-mix(in srgb,var(--surface) 94%,transparent);color:var(--ink);text-shadow:none}
+[data-palette] .spotlight{background:radial-gradient(circle at var(--x) var(--y),var(--key),color-mix(in srgb,var(--key) 30%,var(--surface)) 22%,var(--surface) 62%);border:1px solid var(--line)}
+[data-palette] .valley{background:linear-gradient(165deg,var(--surface),var(--key) 55%,var(--second))}[data-palette] .valley img{mix-blend-mode:luminosity;opacity:.62}
+[data-palette] .beams{background:linear-gradient(130deg,var(--surface),var(--second))}[data-palette] .beams i{background:repeating-linear-gradient(110deg,transparent 0 10%,var(--ray,var(--key)) 15%,transparent 25%)}
+[data-palette] .tilt{background:linear-gradient(120deg,var(--key),var(--second) 36%,var(--key) 55%,color-mix(in srgb,var(--key) 68%,#392a12))}
+[data-palette] .tilt img{mix-blend-mode:luminosity;opacity:.23}
+[data-palette] .tilt strong{color:var(--on-key);background:color-mix(in srgb,var(--second) 78%,transparent)}
+[data-palette] .photo-title img{opacity:.18;filter:grayscale(1)}
+[data-palette] .clock-ring{background:conic-gradient(var(--key) var(--angle),var(--soft) 0);box-shadow:0 4px 20px var(--tint)}
+[data-palette] .clock-ring strong{background:var(--surface)}
+[data-palette] .filing #folder{border-color:var(--key)}[data-palette] .filing .over{background:var(--tint)}
+[data-palette] .resizer{background:var(--tint2)}[data-palette] .sash{border-color:var(--line);background:linear-gradient(90deg,var(--soft) 43%,var(--key) 43% 57%,var(--soft) 57%)}
+[data-palette] :focus-visible{outline-color:var(--edge)}
+
+
 </style></head><body><header><div class="wrap bar"><div class="brand"><span class="mark" aria-hidden="true"></span>交互练习册</div><a id="source" class="source" target="_blank" rel="noopener">查看参考教程</a></div></header>
 <main class="wrap"><div class="layout">
 <aside class="sidebar"><h2 class="sideHead">案例目录 <small id="totalCases"></small></h2>
@@ -61,7 +254,7 @@ function cards(){let index=0,start=null,offset=0,busy=false;panel('<div class="s
 function drawer(){savedDays=2;panel('<div class="ticket"><img id="tripImage" alt="湖畔木屋"><div class="ticket-body"><div><h2>湖畔步道</h2><small id="tripDays">已选 2 天</small></div><button class="primary" id="openSheet">查看详情</button></div></div>');$('tripImage').src=photos[0];$('openSheet').onclick=()=>{draft=savedDays;updateDays();$('sheet').showModal();status('编辑天数')};status('抽屉已收起')}
 function updateDays(){$('days').textContent=draft+' 天';$('less').disabled=draft<=1;$('more').disabled=draft>=7}
 $('less').onclick=()=>{draft=Math.max(1,draft-1);updateDays()};$('more').onclick=()=>{draft=Math.min(7,draft+1);updateDays()};$('confirmDays').onclick=()=>{savedDays=draft;$('tripDays').textContent='已选 '+savedDays+' 天';$('sheet').close('confirmed')};$('closeSheet').onclick=()=>$('sheet').close('cancel');$('sheet').addEventListener('cancel',()=>$('sheet').returnValue='cancel');$('sheet').addEventListener('close',()=>{if(active===1){status($('sheet').returnValue==='confirmed'?'已确认 · '+savedDays+' 天':'已收起 · '+savedDays+' 天');$('openSheet')?.focus()}});$('sheet').onclick=e=>{if(e.target!==e.currentTarget)return;const r=e.currentTarget.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('sheet').close('cancel')};let gripY=null;$('grip').onpointerdown=e=>{gripY=e.clientY;e.target.setPointerCapture(e.pointerId)};$('grip').onpointermove=e=>{if(gripY!==null)$('sheet').style.transform='translateY('+Math.max(0,e.clientY-gripY)+'px)'};function endGrip(e){if(gripY!==null&&e.type==='pointerup'&&e.clientY-gripY>65)$('sheet').close('cancel');gripY=null;$('sheet').style.transform=''}$('grip').onpointerup=$('grip').onpointercancel=endGrip;
-function dial(){let temp=23,pid=null;panel('<div class="widget dialwrap"><div class="dial" id="dial" tabindex="0" role="slider" aria-label="目标温度" aria-valuemin="16" aria-valuemax="30"><div class="hand"></div><output id="degrees"></output></div><div class="row"><button class="round" id="cool" aria-label="降低一度">−</button><strong>目标温度</strong><button class="round" id="warm" aria-label="升高一度">+</button></div></div>');const d=$('dial');function set(v){temp=Math.max(16,Math.min(30,v));d.style.setProperty('--a',(temp-16)*270/14+'deg');d.style.setProperty('--heat',temp>25?'#bf733d':'#459c85');d.setAttribute('aria-valuenow',temp);d.setAttribute('aria-valuetext',temp+' 摄氏度');$('degrees').textContent=temp+'°';$('cool').disabled=temp===16;$('warm').disabled=temp===30;status(temp===16?'已达下限':temp===30?'已达上限':temp+'℃')}function turn(e){const r=d.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;if(Math.hypot(x,y)<16)return;let deg=Math.atan2(x,-y)*180/Math.PI;if(Math.abs(deg)>135&&pid!==null){deg=temp<23?-135:135}set(Math.round(16+(Math.max(-135,Math.min(135,deg))+135)*14/270))}d.onpointerdown=e=>{if(pid!==null||e.button!==0)return;d.focus();pid=e.pointerId;d.setPointerCapture(pid);turn(e)};d.onpointermove=e=>{if(pid===e.pointerId)turn(e)};d.onpointerup=d.onpointercancel=e=>{if(e.pointerId===pid)pid=null};d.onkeydown=e=>{let v={ArrowRight:temp+1,ArrowUp:temp+1,ArrowDown:temp-1,ArrowLeft:temp-1,Home:16,End:30}[e.key];if(v!==undefined){e.preventDefault();set(v)}};$('warm').onclick=()=>set(temp+1);$('cool').onclick=()=>set(temp-1);set(temp)}
+function dial(){let temp=23,pid=null;panel('<div class="widget dialwrap"><div class="dial" id="dial" tabindex="0" role="slider" aria-label="目标温度" aria-valuemin="16" aria-valuemax="30"><div class="hand"></div><output id="degrees"></output></div><div class="row"><button class="round" id="cool" aria-label="降低一度">−</button><strong>目标温度</strong><button class="round" id="warm" aria-label="升高一度">+</button></div></div>');const d=$('dial');function set(v){temp=Math.max(16,Math.min(30,v));d.style.setProperty('--a',(temp-16)*270/14+'deg');d.style.setProperty('--heat',temp>25?'var(--second)':'var(--key)');d.setAttribute('aria-valuenow',temp);d.setAttribute('aria-valuetext',temp+' 摄氏度');$('degrees').textContent=temp+'°';$('cool').disabled=temp===16;$('warm').disabled=temp===30;status(temp===16?'已达下限':temp===30?'已达上限':temp+'℃')}function turn(e){const r=d.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;if(Math.hypot(x,y)<16)return;let deg=Math.atan2(x,-y)*180/Math.PI;if(Math.abs(deg)>135&&pid!==null){deg=temp<23?-135:135}set(Math.round(16+(Math.max(-135,Math.min(135,deg))+135)*14/270))}d.onpointerdown=e=>{if(pid!==null||e.button!==0)return;d.focus();pid=e.pointerId;d.setPointerCapture(pid);turn(e)};d.onpointermove=e=>{if(pid===e.pointerId)turn(e)};d.onpointerup=d.onpointercancel=e=>{if(e.pointerId===pid)pid=null};d.onkeydown=e=>{let v={ArrowRight:temp+1,ArrowUp:temp+1,ArrowDown:temp-1,ArrowLeft:temp-1,Home:16,End:30}[e.key];if(v!==undefined){e.preventDefault();set(v)}};$('warm').onclick=()=>set(temp+1);$('cool').onclick=()=>set(temp-1);set(temp)}
 function submitDemo(){let busy=false;panel('<div class="widget"><h2>保存旅行偏好</h2><p class="sub">本地演示 · 偏好为山间步行</p><button id="save" class="primary save">保存偏好</button><div class="track" aria-hidden="true"><div class="fill" id="progress"></div></div><label class="setting"><input type="checkbox" id="fail">让下一次保存失败</label></div>');$('progress').style.width='0';$('save').onclick=()=>{if(busy)return;busy=true;const fail=$('fail').checked;$('fail').checked=false;$('fail').disabled=true;const btn=$('save');btn.disabled=true;btn.dataset.phase='busy';btn.textContent='正在保存…';status('提交中');$('progress').style.width='35%';soon(()=>$('progress').style.width='75%',350);soon(()=>{busy=false;btn.disabled=false;$('fail').disabled=false;btn.dataset.phase=fail?'error':'done';btn.textContent=fail?'重新保存':'再次保存';$('progress').style.width=fail?'0':'100%';status(fail?'保存失败，可重试':'保存成功')},900)};status('待提交')}
 function rangeDemo(){const fares=[180,260,420,620,840];panel('<div class="widget"><h2>路线预算</h2><p class="sub">按每人预算筛选 5 条示例路线</p><div class="money" id="budget"></div>'+[['lo','最低价',100],['hi','最高价',700]].map(([id,txt,v])=>'<div class="range-row"><label for="'+id+'">'+txt+'<output id="'+id+'Out"></output></label><input id="'+id+'" type="range" min="100" max="900" step="10" value="'+v+'"></div>').join('')+'</div>');function set(id){const a=$('lo'),b=$('hi');if(+a.value>+b.value){if(id==='lo')a.value=b.value;else b.value=a.value}a.max=b.value;b.min=a.value;$('budget').textContent='¥'+a.value+' – ¥'+b.value;$('loOut').textContent='¥'+a.value;$('hiOut').textContent='¥'+b.value;status('匹配 '+fares.filter(v=>v>=+a.value&&v<=+b.value).length+' 条路线')};['lo','hi'].forEach(id=>$(id).oninput=()=>set(id));set('lo')}
 function removeDemo(){let entries=[0,1,2],history=[];function draw(focus){panel('<div class="widget"><h2>候选地点</h2><div id="places"></div></div>');for(const i of entries){const row=el('div','triprow');const btn=button('移除','',()=>{history.push(i);entries=entries.filter(n=>n!==i);draw('undo')});btn.setAttribute('aria-label','移除'+names[i]);btn.id='place'+i;row.append(el('strong','',names[i]),btn);$('places').append(row)}if(!entries.length)$('places').append(el('p','empty','清单已空，可以撤销移除。'));if(history.length){const last=history[history.length-1],u=el('div','undo');const btn=button('撤销','',()=>{const i=history.pop();entries.push(i);entries.sort((a,b)=>a-b);draw('place'+i)});btn.id='undo';u.append(el('span','','已移除'+names[last]),btn);$('places').append(u)}status(entries.length+' 个地点');if(focus)$(focus)?.focus()}draw()}
@@ -176,6 +369,7 @@ function imeDemo(){
   add.onclick=commit;sync();status('等待输入备注');
 }
 
+const referenceSeconds=[41, 15, 27, 29, 59, 199, 168, 93, 45, 31, 48, 119, 22, 34, 17, 43, 57, 21, 5, 146, 57, 122, 80, 79, 17, 80, 71, 45, 159, 56, 140, 22, 23, 85, 19, 15, 15, 27, 33, 39, 26, 151, 26, 124, 85, 86, 34, 68, 22, 56, 16, 28, 10, 74, 46, 188, 122, 28];
 const groupNames=['操作反馈与等待','拖动、吸附与取消','选择、范围与输入','卡片、抽屉与弹层','导航与布局','列表与数据联动','视觉动效与表达'];
 const oldGroups=[1,3,2,0,2,5,1,2,3,0,5,5,4,2];
 const runners=[cards,drawer,dial,submitDemo,rangeDemo,removeDemo,reorderDemo,searchDemo,accordionDemo,skeletonDemo,packDemo,monthDemo,segmentDemo,imeDemo];
@@ -470,7 +664,7 @@ example(6,'分层视差','移动观察位置，比较远山和近处路牌的位
 });
 example(6,'可调背景光束','调整背景光束的速度和色调，观察前景文字的可读性。','拖动速度滑轨，切换色调，或暂停背景。','暂停会冻结光束。减少动态效果偏好会关闭持续运动。','7710429983525419126',()=>{
   workbench('夜游海报','<div class="visual-board beams" id="beams"><i></i><strong>沿湖夜行</strong></div><div class="segment" id="hues"></div>');let paused=false;const beam=$('beams').firstChild;
-  choices('hues',['青绿','琥珀'],i=>{beam.style.setProperty('--ray',i?'#e2ac58':'#68cbbb');status(i?'琥珀光束':'青绿光束')});
+  choices('hues',['洋红','靛蓝'],i=>{beam.style.setProperty('--ray',i?'var(--second)':'var(--key)');status(i?'靛蓝光束':'洋红光束')});
   rangeControl('光束周期（秒）',1,8,4,n=>{beam.style.animationDuration=n+'s';status('光束周期 '+n+' 秒')});const b=button('暂停光束','pill',()=>{paused=!paused;beam.style.animationPlayState=paused?'paused':'running';b.textContent=paused?'继续光束':'暂停光束';status(paused?'光束已暂停':reduceMotion()?'减少动态效果已开启':'光束播放中')});$('actions').append(b);
 });
 example(6,'图标连续变形','把菜单的三条线原位变成关闭图标，再还原。','打开路线菜单后再次点击原按钮。','图标、菜单可见性和按钮名称指向同一开关状态。','7689034729610500206',()=>{
@@ -575,6 +769,13 @@ function show(i){
   if($('sheet').open)$('sheet').close();
   generation++;timers.forEach(clearTimeout);timers=[];active=i;
   const c=cases[i];
+  const palette=String(i+1);
+  $('demo').closest('.panel').dataset.palette=palette;
+  $('sheet').dataset.palette=palette;
+  const seconds=referenceSeconds[i];
+  const time=[Math.floor(seconds/60),seconds%60].map(n=>String(n).padStart(2,'0')).join(':');
+  $('source').textContent='参考原片 · '+time;
+  $('source').title='查看抖音原片，在 '+time+' 对照组件配色';
   menuButtons.forEach((b,j)=>{b.setAttribute('aria-pressed',String(i===j));if(i===j)b.setAttribute('aria-current','true');else b.removeAttribute('aria-current')});
   if(!search.value.trim())navSections.forEach((s,g)=>s.open=g===groups[i]);
   else if(menuButtons[i].hidden){search.value='';filterCases()}
